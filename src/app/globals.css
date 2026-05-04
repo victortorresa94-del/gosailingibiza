@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ocean-deep: #0B2C4A;
+  --color-turquoise: #00C9B1;
+  --color-sand: #F5EDD9;
+  --color-coral: #E8604C;
+  --color-white: #FAFAFA;
+  --color-text: #1A1A2E;
+  --color-text-muted: #6B7280;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    color: var(--color-text);
+    background: var(--color-white);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-turquoise text-white font-body font-medium px-6 py-3 rounded-full transition-all duration-200 hover:bg-opacity-90 hover:scale-[1.02] active:scale-[0.98];
+  }
+  .btn-coral {
+    @apply bg-coral text-white font-body font-medium px-6 py-3 rounded-full transition-all duration-200 hover:bg-opacity-90 hover:scale-[1.02] active:scale-[0.98];
+  }
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md rounded-2xl shadow-lg;
+  }
+  .section-pad {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Booking widget select/input resets */
+select, input {
+  outline: none;
+}
